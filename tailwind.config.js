@@ -1,8 +1,18 @@
+const colors = require("tailwindcss/colors");
+
 module.exports = {
-  purge: ["./src/**/*.html", "./src/**/*.js"],
+  purge: ["*.html", "*.js"],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    colors: {
+      gray: colors.warmGray,
+      blue: colors.indigo,
+    },
+    extend: {
+      padding: {
+        "1/3": "33.33333%",
+      },
+    },
   },
   variants: {},
   plugins: [],
